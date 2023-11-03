@@ -25,7 +25,7 @@ public class SumToNullNumber
     1, 2, 3이 numbers에 없으므로, 1 + 2 + 3 = 6을 return 해야 합니다.
     */
 
-    public int solution(int[] numbers) 
+    public static int solution(int[] numbers) 
     {
         return 45 - numbers.Sum();
     }
