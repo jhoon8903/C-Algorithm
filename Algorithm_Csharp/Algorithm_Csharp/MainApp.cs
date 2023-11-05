@@ -4,6 +4,7 @@ public static class MainApp
 {
     public static void Main()
     {
-        HomeWork.TicTacToe();
+        string s = "one4seveneight";
+        IntegerStringConvert.solution(s);
     }
 }
