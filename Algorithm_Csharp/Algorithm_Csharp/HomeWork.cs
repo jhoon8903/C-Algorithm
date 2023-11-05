@@ -140,7 +140,8 @@ public static class HomeWork
         {
             for (int j = 0; j < Size; j++)
             {
-                if (_board != null) _board[i, j] = ' ';
+                // if (_board != null) 
+                    _board[i, j] = ' ';
             }
         }
     }
@@ -153,7 +154,8 @@ public static class HomeWork
         {
             for (int j = 0; j < Size; j++)
             {
-                if (_board != null) Console.Write(_board[i, j]);
+                Console.Write(_board[i, j]);
+
                 if (j < Size - 1)
                 {
                     Console.Write("|");
@@ -197,7 +199,8 @@ public static class HomeWork
                     Console.WriteLine(winner + " 플레이어가 승리했습니다!");
                     break;
                 }
-                else if (IsBoardFull())
+
+                if (IsBoardFull())
                 {
                     Console.WriteLine("무승부입니다!");
                     break;
@@ -213,7 +216,8 @@ public static class HomeWork
                     Console.WriteLine(winner + " 컴퓨터가 승리했습니다!");
                     break;
                 }
-                else if (IsBoardFull())
+
+                if (IsBoardFull())
                 {
                     Console.WriteLine("무승부입니다!");
                     break;
@@ -232,11 +236,9 @@ public static class HomeWork
             int row = Random.Next(Size);
             int col = Random.Next(Size);
 
-            if (_board[row, col] == ' ')
-            {
-                _board[row, col] = 'O'; 
-                break;
-            }
+            if (_board != null && _board[row, col] != ' ') continue;
+            if (_board != null) _board[row, col] = 'O';
+            break;
         }
     }
     

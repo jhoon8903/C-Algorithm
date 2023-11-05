@@ -4,5 +4,6 @@ public static class MainApp
 {
     public static void Main()
     {
+        HomeWork.TicTacToe();
     }
 }
