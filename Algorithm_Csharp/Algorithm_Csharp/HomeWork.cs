@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Numerics;
 
 namespace Algorithm_Csharp;
 
@@ -123,6 +124,7 @@ public static class HomeWork
         }
     }
 
+
     private static char[,]? _board;
     private const int Size = 3;
     private static readonly Random Random = new Random();
@@ -172,20 +174,19 @@ public static class HomeWork
     private static void Play()
     {
         bool isPlayerTurn = true; // 플레이어부터 시작
-        char winner = ' ';
         while (true) // 또는 승리 조건이 충족될 때까지 루프
         {
+            var winner = ' ';
             if (isPlayerTurn)
             {
                 Console.Write("공격할 좌표를 입력 하세요 (예: 0,1) \n[0~2]까지 입력 가능 Play는 'X' 입니다.: ");
                 string input = Console.ReadLine();
                 string[] separate = input.Split(',');
 
-                if (separate.Length != 2 ||
-                    !int.TryParse(separate[0], out int row) ||
-                    !int.TryParse(separate[1], out int col) ||
-                    row < 0 || row >= Size || col < 0 || col >= Size ||
-                    _board[row, col] != ' ')
+                if (separate.Length != 2 
+                    || !int.TryParse(separate[0], out int row) 
+                    || !int.TryParse(separate[1], out int col) 
+                    || row < 0 || row >= Size || col < 0 || col >= Size || _board[row, col] != ' ')
                 {
                     Console.WriteLine("잘못된 입력입니다. 다시 시도하세요.");
                     continue;
@@ -223,7 +224,6 @@ public static class HomeWork
                     break;
                 }
             }
-
             // 턴 교대
             isPlayerTurn = !isPlayerTurn;
         }
@@ -247,9 +247,7 @@ public static class HomeWork
         // 행 검사
         for (int row = 0; row < Size; row++)
         {
-            if (_board[row, 0] != ' ' && 
-                _board[row, 0] == _board[row, 1] && 
-                _board[row, 1] == _board[row, 2])
+            if (_board[row, 0] != ' ' && _board[row, 0] == _board[row, 1] && _board[row, 1] == _board[row, 2])
             {
                 return _board[row, 0];
             }
@@ -258,29 +256,22 @@ public static class HomeWork
         // 열 검사
         for (int col = 0; col < Size; col++)
         {
-            if (_board[0, col] != ' ' && 
-                _board[0, col] == _board[1, col] && 
-                _board[1, col] == _board[2, col])
+            if (_board[0, col] != ' ' && _board[0, col] == _board[1, col] && _board[1, col] == _board[2, col])
             {
                 return _board[0, col];
             }
         }
 
         // 대각선 검사
-        if (_board[0, 0] != ' ' && 
-            _board[0, 0] == _board[1, 1] && 
-            _board[1, 1] == _board[2, 2])
+        if (_board[0, 0] != ' ' && _board[0, 0] == _board[1, 1] && _board[1, 1] == _board[2, 2])
         {
             return _board[0, 0];
         }
 
-        if (_board[0, 2] != ' ' && 
-            _board[0, 2] == _board[1, 1] && 
-            _board[1, 1] == _board[2, 0])
+        if (_board[0, 2] != ' ' && _board[0, 2] == _board[1, 1] && _board[1, 1] == _board[2, 0])
         {
             return _board[0, 2];
         }
-
         // 승자가 없는 경우
         return ' ';
     }
@@ -299,4 +290,15 @@ public static class HomeWork
         }
         return true;
     }
-} 
+}
+
+public static class SnakeGame
+{
+    public enum SnakeStatus { MOVE, IDLE, EAT, DIE }
+    // public             
+}
+
+public static class FoodCreator
+{
+
+}
