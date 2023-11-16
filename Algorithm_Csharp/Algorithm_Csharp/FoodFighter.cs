@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace Algorithm_Csharp;
 
 public class FoodFighter
@@ -41,20 +43,17 @@ public class FoodFighter
 
     public string solution(int[] food)
     {
-        int[] tempTable = {};
-        int[] table = { };
-
-        for (int i = 0; i < food.Length-1; i++)
+        StringBuilder leftTable = new StringBuilder();
+        StringBuilder rightTable = new StringBuilder();
+        for (int i = food.Length - 1; i >= 1; i--)
         {
-            if (i == 0)
+            int half = food[i] / 2;
+            for (int j = 0; j < half; j++)
             {
-                tempTable[i] = food[0];
-            }
-            else
-            {
-                tempTable[i] = food[i];
+                leftTable.Insert(0,i);
+                rightTable.Append(i);
             }
         }
-        return tempTable.ToString();
+        return leftTable + "0" + rightTable;
     }
 }
