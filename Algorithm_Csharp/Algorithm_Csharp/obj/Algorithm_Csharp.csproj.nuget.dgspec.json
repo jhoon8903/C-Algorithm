@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/daniel/Documents/GitHub/C#Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj": {}
+    "/Users/daniel/Documents/GitHub/C-Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj": {}
   },
   "projects": {
-    "/Users/daniel/Documents/GitHub/C#Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj": {
+    "/Users/daniel/Documents/GitHub/C-Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/daniel/Documents/GitHub/C#Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj",
+        "projectUniqueName": "/Users/daniel/Documents/GitHub/C-Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj",
         "projectName": "Algorithm_Csharp",
-        "projectPath": "/Users/daniel/Documents/GitHub/C#Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj",
+        "projectPath": "/Users/daniel/Documents/GitHub/C-Algorithm/Algorithm_Csharp/Algorithm_Csharp/Algorithm_Csharp.csproj",
         "packagesPath": "/Users/daniel/.nuget/packages/",
-        "outputPath": "/Users/daniel/Documents/GitHub/C#Algorithm/Algorithm_Csharp/Algorithm_Csharp/obj/",
+        "outputPath": "/Users/daniel/Documents/GitHub/C-Algorithm/Algorithm_Csharp/Algorithm_Csharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/daniel/.nuget/NuGet/NuGet.Config"
