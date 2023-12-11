@@ -1,6 +1,9 @@
 using System.Reflection;
 
-namespace Algorithm_Csharp;
+public abstract class KataBase
+{
+    public abstract void Example();
+}
 
 public static class Program
 {
@@ -15,7 +18,7 @@ public static class Program
         if (testType != null)
         {
             var instance = Activator.CreateInstance(testType) as KataBase;
-            instance?.Example();
+            instance?.Example(); 
         }
         else
         {
